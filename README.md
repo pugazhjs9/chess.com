@@ -149,22 +149,4 @@ chess-game/
 - **Move Handling**:
   Validates moves, updates the game state, and broadcasts updates to all connected clients.
 
----
-
-## **Deployment**
-
-### Deploy on Vercel
-
-1. Install the Vercel CLI:
-```bash
-npm install -g vercel
-```
-
-2. Deploy the project:
-```bash
-vercel
-```
-
-3. Follow the prompts to deploy your backend.
-
----
+-
