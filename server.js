@@ -15,12 +15,15 @@ let players = {}
 let currectPlayer = "w"
 
 // setup ejs or setup views folder
-app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname,'public')));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "templates"));
 
-app.get("/",(req,res)=>{
-    res.render("index")
-})
+app.use(express.static(path.join(__dirname, "assets")));
+
+// Render the home page
+app.get("/", (req, res) => {
+  res.render("welcome"); // Render the EJS file
+});
 
 io.on("connection",function(uniquesocket){
     console.log("connected")

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/scripts/css/style.css">
+</head>
+<body>
+    <!-- Landing Page with Play Button -->
+    <div class="w-full h-screen flex flex-col items-center justify-center space-y-10 md:ml-32">
+        <h1 class="text-5xl font-semibold text-white">Welcome to Chess</h1>
+        <button class="btn-play">Play Game</button>
+    </div>
+
+    <!-- Chessboard Section -->
+    <div class="w-full h-screen flex flex-col items-center justify-center bg-zinc-900 hidden" id="chessboard-container">
+        <h1 class="chess-title">Chess Game</h1>
+        <div class="chessboard w-96 h-96"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        Game started! Good luck!
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+    integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+    integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/scripts/chess-arena.js"></script>
+
+    <script>
+        // Handle Play button click to show chessboard
+        const playButton = document.querySelector('.btn-play');
+        const chessboardContainer = document.getElementById('chessboard-container');
+        const toast = document.getElementById('toast');
+
+        playButton.addEventListener('click', () => {
+            // Hide the landing page and show the chessboard
+            playButton.parentElement.classList.add('hidden');
+            chessboardContainer.classList.remove('hidden');
+
+            // Show the toast notification
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000); // Hide toast after 3 seconds
+        });
+    </script>
+</body>
+</html>
