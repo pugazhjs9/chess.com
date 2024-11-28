@@ -1,18 +1,26 @@
 {
   "name": "chess",
   "version": "1.0.0",
+  "description": "A real-time chess game using Express, Socket.IO, and Chess.js",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["chess", "express", "socket.io", "chess.js", "real-time"],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "chess.js": "^1.0.0-beta.8",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22" 
+  },
+  "engines": {
+    "node": ">=14.x"
   }
 }
