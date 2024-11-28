@@ -65,13 +65,12 @@ http://localhost:3000
 
 ## **Project Structure**
 ```
-chess-game/
-├── public/                    # Static files (CSS, client-side JS)
-│   └── js/
-│       └── chessgame.js       # Client-side logic
+chess-arena/
+├── assests/                    # Static files (CSS, client-side JS)
+│   └── scripts/
+│       └── chess-arena.js       # Client-side logic
 ├── views/                     # EJS templates
-│   └── index.ejs              # Main frontend template
-├── app.js                     # Entry point of the application
+│   └── welcome.ejs              # Main frontend template 
 ├── server.js                  # Server-side logic
 └── package.json               # Project dependencies and scripts
 ```
