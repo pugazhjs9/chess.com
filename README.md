@@ -1,6 +1,3 @@
-Here's a detailed `README.md` file for your chess game project. This README will help you showcase your project on GitHub, providing essential information for potential users, contributors, or future developers.
-
----
 
 # **Custom Chess Game** ♟️
 
